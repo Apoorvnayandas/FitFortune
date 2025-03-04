@@ -7,11 +7,10 @@ const Hero = () => {
       <div className="hero_content flex-between h-3/4">
         <div className="hero_text">
           <p className="text-7xl font-bold">
-            Every Bite,<br />Thoughtfully <span className="p-2 bg-light-green">Planned.</span>
+          Eat Smart<br /> Move Better <span className="p-2 bg-light-green"> Live Well.</span>
           </p>
           <p className="text-2xl w-3/4 text-gray-400 font-semibold mt-10">
-            FitFortune is your ultimate meal planning companion
-            helping you savor every meal, your way.
+          FitFortune is your go-to wellness partner, guiding you to enjoy every bite and embrace an active lifestyle.
           </p>
         </div>
         <div className="hero_image" data-aos="zoom-in-up" data-aos-duration="" >
