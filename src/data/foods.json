@@ -1,0 +1,2290 @@
+[
+  {
+    "id": 1,
+    "name": "Fruit 1",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Vegetable 2",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Protein 3",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Grain 4",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Dairy 5",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Snack 6",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Fruit 7",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Vegetable 8",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Protein 9",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food9.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Grain 10",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Dairy 11",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Snack 12",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Fruit 13",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Vegetable 14",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Protein 15",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Grain 16",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Dairy 17",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Snack 18",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Fruit 19",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Vegetable 20",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Protein 21",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Grain 22",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Dairy 23",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Snack 24",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Fruit 25",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Vegetable 26",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Protein 27",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Grain 28",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Dairy 29",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Snack 30",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food30.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Fruit 31",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food31.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Vegetable 32",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food32.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Protein 33",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food33.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Grain 34",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food34.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Dairy 35",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food35.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Snack 36",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food36.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Fruit 37",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food37.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Vegetable 38",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food38.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Protein 39",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food39.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Grain 40",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food40.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Dairy 41",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food41.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Snack 42",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food42.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Fruit 43",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food43.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Vegetable 44",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food44.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Protein 45",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food45.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Grain 46",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food46.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Dairy 47",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food47.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Snack 48",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food48.jpg"
+  },
+  {
+    "id": 49,
+    "name": "Fruit 49",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food49.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Vegetable 50",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food50.jpg"
+  },
+  {
+    "id": 51,
+    "name": "Protein 51",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food51.jpg"
+  },
+  {
+    "id": 52,
+    "name": "Grain 52",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food52.jpg"
+  },
+  {
+    "id": 53,
+    "name": "Dairy 53",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food53.jpg"
+  },
+  {
+    "id": 54,
+    "name": "Snack 54",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food54.jpg"
+  },
+  {
+    "id": 55,
+    "name": "Fruit 55",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food55.jpg"
+  },
+  {
+    "id": 56,
+    "name": "Vegetable 56",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food56.jpg"
+  },
+  {
+    "id": 57,
+    "name": "Protein 57",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food57.jpg"
+  },
+  {
+    "id": 58,
+    "name": "Grain 58",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food58.jpg"
+  },
+  {
+    "id": 59,
+    "name": "Dairy 59",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food59.jpg"
+  },
+  {
+    "id": 60,
+    "name": "Snack 60",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food60.jpg"
+  },
+  {
+    "id": 61,
+    "name": "Fruit 61",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food61.jpg"
+  },
+  {
+    "id": 62,
+    "name": "Vegetable 62",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food62.jpg"
+  },
+  {
+    "id": 63,
+    "name": "Protein 63",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food63.jpg"
+  },
+  {
+    "id": 64,
+    "name": "Grain 64",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food64.jpg"
+  },
+  {
+    "id": 65,
+    "name": "Dairy 65",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food65.jpg"
+  },
+  {
+    "id": 66,
+    "name": "Snack 66",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food66.jpg"
+  },
+  {
+    "id": 67,
+    "name": "Fruit 67",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food67.jpg"
+  },
+  {
+    "id": 68,
+    "name": "Vegetable 68",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food68.jpg"
+  },
+  {
+    "id": 69,
+    "name": "Protein 69",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food69.jpg"
+  },
+  {
+    "id": 70,
+    "name": "Grain 70",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food70.jpg"
+  },
+  {
+    "id": 71,
+    "name": "Dairy 71",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food71.jpg"
+  },
+  {
+    "id": 72,
+    "name": "Snack 72",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food72.jpg"
+  },
+  {
+    "id": 73,
+    "name": "Fruit 73",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food73.jpg"
+  },
+  {
+    "id": 74,
+    "name": "Vegetable 74",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food74.jpg"
+  },
+  {
+    "id": 75,
+    "name": "Protein 75",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food75.jpg"
+  },
+  {
+    "id": 76,
+    "name": "Grain 76",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food76.jpg"
+  },
+  {
+    "id": 77,
+    "name": "Dairy 77",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food77.jpg"
+  },
+  {
+    "id": 78,
+    "name": "Snack 78",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food78.jpg"
+  },
+  {
+    "id": 79,
+    "name": "Fruit 79",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food79.jpg"
+  },
+  {
+    "id": 80,
+    "name": "Vegetable 80",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food80.jpg"
+  },
+  {
+    "id": 81,
+    "name": "Protein 81",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food81.jpg"
+  },
+  {
+    "id": 82,
+    "name": "Grain 82",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food82.jpg"
+  },
+  {
+    "id": 83,
+    "name": "Dairy 83",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food83.jpg"
+  },
+  {
+    "id": 84,
+    "name": "Snack 84",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food84.jpg"
+  },
+  {
+    "id": 85,
+    "name": "Fruit 85",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food85.jpg"
+  },
+  {
+    "id": 86,
+    "name": "Vegetable 86",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food86.jpg"
+  },
+  {
+    "id": 87,
+    "name": "Protein 87",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food87.jpg"
+  },
+  {
+    "id": 88,
+    "name": "Grain 88",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food88.jpg"
+  },
+  {
+    "id": 89,
+    "name": "Dairy 89",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food89.jpg"
+  },
+  {
+    "id": 90,
+    "name": "Snack 90",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food90.jpg"
+  },
+  {
+    "id": 91,
+    "name": "Fruit 91",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food91.jpg"
+  },
+  {
+    "id": 92,
+    "name": "Vegetable 92",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food92.jpg"
+  },
+  {
+    "id": 93,
+    "name": "Protein 93",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food93.jpg"
+  },
+  {
+    "id": 94,
+    "name": "Grain 94",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food94.jpg"
+  },
+  {
+    "id": 95,
+    "name": "Dairy 95",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food95.jpg"
+  },
+  {
+    "id": 96,
+    "name": "Snack 96",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food96.jpg"
+  },
+  {
+    "id": 97,
+    "name": "Fruit 97",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food97.jpg"
+  },
+  {
+    "id": 98,
+    "name": "Vegetable 98",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food98.jpg"
+  },
+  {
+    "id": 99,
+    "name": "Protein 99",
+    "category": "proteins",
+    "servingSize": "100g",
+    "calories": 200,
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fats": 10,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 20,
+      "iron": 2
+    },
+    "glycemicIndex": 0,
+    "allergens": [],
+    "imageUrl": "http://example.com/food99.jpg"
+  },
+  {
+    "id": 100,
+    "name": "Grain 100",
+    "category": "grains",
+    "servingSize": "1 cup cooked",
+    "calories": 220,
+    "macros": {
+      "protein": 5,
+      "carbs": 45,
+      "fats": 2,
+      "fiber": 5
+    },
+    "micronutrients": {
+      "vitamin_a": 0,
+      "vitamin_c": 0,
+      "calcium": 10,
+      "iron": 1.5
+    },
+    "glycemicIndex": 70,
+    "allergens": ["gluten"],
+    "imageUrl": "http://example.com/food100.jpg"
+  },
+  {
+    "id": 101,
+    "name": "Dairy 101",
+    "category": "dairy",
+    "servingSize": "1 cup",
+    "calories": 150,
+    "macros": {
+      "protein": 8,
+      "carbs": 12,
+      "fats": 8,
+      "fiber": 0
+    },
+    "micronutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 2,
+      "calcium": 300,
+      "iron": 0.1
+    },
+    "glycemicIndex": 30,
+    "allergens": ["lactose"],
+    "imageUrl": "http://example.com/food101.jpg"
+  },
+  {
+    "id": 102,
+    "name": "Snack 102",
+    "category": "snacks",
+    "servingSize": "1 serving",
+    "calories": 180,
+    "macros": {
+      "protein": 4,
+      "carbs": 22,
+      "fats": 10,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
+    },
+    "glycemicIndex": 60,
+    "allergens": [],
+    "imageUrl": "http://example.com/food102.jpg"
+  },
+  {
+    "id": 103,
+    "name": "Fruit 103",
+    "category": "fruits",
+    "servingSize": "1 medium",
+    "calories": 80,
+    "macros": {
+      "protein": 1.5,
+      "carbs": 20,
+      "fats": 0.5,
+      "fiber": 3
+    },
+    "micronutrients": {
+      "vitamin_a": 50,
+      "vitamin_c": 60,
+      "calcium": 10,
+      "iron": 0.5
+    },
+    "glycemicIndex": 40,
+    "allergens": [],
+    "imageUrl": "http://example.com/food103.jpg"
+  },
+  {
+    "id": 104,
+    "name": "Vegetable 104",
+    "category": "vegetables",
+    "servingSize": "1 cup raw",
+    "calories": 50,
+    "macros": {
+      "protein": 2,
+      "carbs": 10,
+      "fats": 0.2,
+      "fiber": 2
+    },
+    "micronutrients": {
+      "vitamin_a": 100,
+      "vitamin_c": 80,
+      "calcium": 30,
+      "iron": 1
+    },
+    "glycemicIndex": 15,
+    "allergens": [],
+    "imageUrl": "http://example.com/food104.jpg"
+  }
+]
