@@ -62,7 +62,7 @@ const Footer = () => {
             </section>
             <div className="footer_last_section flex-between py-10">
                 <div className="text-md text-custom-gray">
-                    © 2023 Meal Mate. All rights reserved.
+                    © 2025 FitFortune. All rights reserved.
                 </div>
                 <div className="">
                     <img src={"/assets/logo.svg"} width={50} alt="logo" />
