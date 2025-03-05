@@ -40,7 +40,6 @@ const CursorEffect = () => {
       }, 1000);
     };
 
-    // Create sparkles around the cursor
     const createSparkles = (x, y) => {
       // Create 3-5 sparkles
       const sparkleCount = Math.floor(Math.random() * 3) + 3;
