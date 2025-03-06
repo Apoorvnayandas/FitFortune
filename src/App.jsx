@@ -12,6 +12,7 @@ import Community from './pages/Community'
 import { DataProvider } from './context/DataContext'
 import TestDashboard from './components/TestDashboard'
 import Dashboard from './pages/Dashboard'
+import PersonalCheckup from './pages/PersonalCheckup'
 import CursorEffect from './components/common/CursorEffect'
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/test" element={<TestDashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/checkup" element={<PersonalCheckup />} />
           </Routes>
           <CursorEffect />
         </div>

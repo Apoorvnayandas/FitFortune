@@ -15,7 +15,7 @@ const Header = () => {
                     <img src="/assets/logo.svg" width={50} alt="FitFortune logo" />
                 </div>
             </NavLink>
-            <ul className="nav_links flex-between w-[40%]">
+            <ul className="nav_links flex-between w-[50%]">
                 <li className='text-lg text-gray-600 font-semibold hover:text-green-500 transition-colors'>
                     <NavLink to="/meal-planner" className={({isActive}) => isActive ? "text-green-500 font-bold" : ""}>
                         Meal Plans
@@ -34,6 +34,11 @@ const Header = () => {
                 <li className='text-lg text-gray-600 font-semibold hover:text-green-500 transition-colors'>
                     <NavLink to="/workout" className={({isActive}) => isActive ? "text-green-500 font-bold" : ""}>
                         Workouts
+                    </NavLink>
+                </li>
+                <li className='text-lg text-gray-600 font-semibold hover:text-green-500 transition-colors'>
+                    <NavLink to="/checkup" className={({isActive}) => isActive ? "text-green-500 font-bold" : ""}>
+                        Checkup
                     </NavLink>
                 </li>
                 <li className='text-lg text-gray-600 font-semibold hover:text-green-500 transition-colors'>
