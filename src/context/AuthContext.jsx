@@ -20,42 +20,20 @@ export const AuthProvider = ({ children }) => {
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
-  // Check if the site is running in production
-  const isProduction = window.location.hostname !== 'localhost' && 
-                       window.location.hostname !== '127.0.0.1';
-  
-  console.log('Auth environment:', { isProduction, hostname: window.location.hostname });
 
   // Initialize auth state from localStorage
   useEffect(() => {
-    try {
-      const storedUser = localStorage.getItem('user');
-      if (storedUser) {
-        const parsedUser = JSON.parse(storedUser);
-        console.log('Found stored user:', !!parsedUser);
-        setUser(parsedUser);
-        
-        // Try to fetch profile if user exists
-        const fetchStoredProfile = async () => {
-          try {
-            if (parsedUser && parsedUser.id) {
-              const { profile: userProfile } = await profileService.getProfile(parsedUser.id);
-              if (userProfile) {
-                setProfile(userProfile);
-              }
-            }
-          } catch (error) {
-            console.log('No profile found for stored user');
-          }
-        };
-        
-        fetchStoredProfile();
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      try {
+        setUser(JSON.parse(storedUser));
+        setLoading(false);
+      } catch (e) {
+        console.error('Error parsing stored user:', e);
+        localStorage.removeItem('user');
+        setLoading(false);
       }
-    } catch (e) {
-      console.error('Error parsing stored user:', e);
-      localStorage.removeItem('user');
-    } finally {
+    } else {
       setLoading(false);
     }
   }, []);
@@ -162,9 +140,8 @@ export const AuthProvider = ({ children }) => {
       // Set the user in state
       setUser(signedInUser);
       
-      // Store in localStorage - crucial for persistence in deployed environments
+      // Store in localStorage
       localStorage.setItem('user', JSON.stringify(signedInUser));
-      console.log('User stored in localStorage:', !!signedInUser);
       
       // Try to fetch profile if available
       try {
@@ -199,20 +176,12 @@ export const AuthProvider = ({ children }) => {
       setUser(null);
       setProfile(null);
       localStorage.removeItem('user');
-      localStorage.removeItem('demoUser');
       
       return { success: true };
     } catch (err) {
       const errorMessage = err.message || 'Failed to sign out';
       console.error('Sign out error:', errorMessage);
       setError(errorMessage);
-      
-      // Force clear storage anyway
-      localStorage.removeItem('user');
-      localStorage.removeItem('demoUser');
-      setUser(null);
-      setProfile(null);
-      
       return { success: false, error: errorMessage };
     } finally {
       setLoading(false);
@@ -272,20 +241,6 @@ export const AuthProvider = ({ children }) => {
       }
       
       setProfile(updatedProfile);
-      
-      // Update user metadata in localStorage if fullName changed
-      if (profileData.fullName) {
-        const updatedUser = { 
-          ...user, 
-          user_metadata: { 
-            ...user.user_metadata, 
-            fullName: profileData.fullName 
-          } 
-        };
-        setUser(updatedUser);
-        localStorage.setItem('user', JSON.stringify(updatedUser));
-      }
-      
       return { success: true, profile: updatedProfile };
     } catch (err) {
       const errorMessage = err.message || 'Failed to update profile';

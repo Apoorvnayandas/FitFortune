@@ -1,20 +1,9 @@
-import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext.jsx'
 import ProfileMenu from './ProfileMenu'
 
 const Header = () => {
     const { user, isAuthenticated } = useAuth()
-    const [hasUser, setHasUser] = useState(false);
-    
-    // Extra check for user existence to ensure the UI updates
-    useEffect(() => {
-        // Check localStorage directly as a fallback
-        const storedUser = localStorage.getItem('user');
-        const isLoggedIn = !!user || !!storedUser;
-        console.log('Auth Status:', { isAuthenticated, hasUser: !!user, storedUser: !!storedUser });
-        setHasUser(isLoggedIn);
-    }, [user, isAuthenticated]);
 
     return (
         <nav className="flex-between h-[10vh] border-b-[1px] px-8">
@@ -57,7 +46,7 @@ const Header = () => {
                 </li>
             </ul>
             <div className="nav_auth text-xl">
-                {isAuthenticated || hasUser ? (
+                {isAuthenticated ? (
                     <ProfileMenu />
                 ) : (
                     <>
