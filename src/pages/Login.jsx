@@ -1,13 +1,17 @@
 import { useState } from "react"
 import { useNavigate, NavLink } from "react-router-dom"
+import { useAuth } from "../context/AuthContext"
+import { toast } from "react-toastify"
 
-const Login = () => {
+const Login = ({ dbStatus }) => {
     const navigate = useNavigate()
+    const { signIn } = useAuth()
     const [formData, setFormData] = useState({
-        username: '',
+        email: '',
         password: ''
     })
     const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
         setFormData({
@@ -17,32 +21,72 @@ const Login = () => {
         setError('') // Clear error when user types
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         
         // Basic validation
-        if (!formData.username || !formData.password) {
+        if (!formData.email || !formData.password) {
             setError('Please fill in all fields')
             return
         }
 
-        // For demo purposes, we'll use a simple authentication
-        // In a real app, this would be an API call
-        if (formData.username === localStorage.getItem('username') && 
-            formData.password === localStorage.getItem('password')) {
-            localStorage.setItem('login', 'true')
-            localStorage.setItem('id', formData.username)
-            navigate('/meal-planner')
-        } else {
-            setError('Invalid username or password')
+        setLoading(true)
+        
+        try {
+            // Use the authentication service to sign in
+            const { success, error, user } = await signIn(formData.email, formData.password)
+            
+            if (success) {
+                toast.success('Login successful!', {
+                    position: 'top-right',
+                    autoClose: 2000
+                })
+                navigate('/dashboard')
+            } else {
+                setError(error || 'Invalid email or password')
+                toast.error('Login failed. Please check your credentials.', {
+                    position: 'top-right',
+                    autoClose: 3000
+                })
+            }
+        } catch (err) {
+            setError(err.message || 'An error occurred during login')
+            toast.error('Login failed. Please try again later.', {
+                position: 'top-right',
+                autoClose: 3000
+            })
+        } finally {
+            setLoading(false)
         }
     }
 
     const handleGetStarted = () => {
-        localStorage.setItem('login', 'true')
-        localStorage.setItem('id', 'guest')
-        navigate('/meal-planner')
+        // For demo purposes, we'll use local storage for guest mode
+        localStorage.setItem('guestMode', 'true')
+        toast.info('Continuing as guest. Some features may be limited.', {
+            position: 'top-right',
+            autoClose: 3000
+        })
+        navigate('/dashboard')
     }
+
+    // Show database status message if there's an error
+    const showDbMessage = dbStatus?.error && (
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+            <div className="flex">
+                <div className="flex-shrink-0">
+                    <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                </div>
+                <div className="ml-3">
+                    <p className="text-sm text-yellow-700">
+                        {dbStatus.error}
+                    </p>
+                </div>
+            </div>
+        </div>
+    )
 
     return (
         <div className="w-full min-h-[85vh] overflow-hidden grid place-content-center">
@@ -51,16 +95,19 @@ const Login = () => {
                     Welcome Back to FitFortune
                 </h1>
                 
+                {showDbMessage}
+                
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div className="form-group">
-                        <label className="block text-gray-600 mb-2">Username</label>
+                        <label className="block text-gray-600 mb-2">Email</label>
                         <input 
-                            type="text"
-                            name="username"
-                            value={formData.username}
+                            type="email"
+                            name="email"
+                            value={formData.email}
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500"
-                            placeholder="Enter your username"
+                            placeholder="Enter your email"
+                            disabled={loading}
                         />
                     </div>
 
@@ -73,6 +120,7 @@ const Login = () => {
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500"
                             placeholder="Enter your password"
+                            disabled={loading}
                         />
                     </div>
 
@@ -84,9 +132,10 @@ const Login = () => {
 
                     <button 
                         type="submit"
-                        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors mt-2"
+                        className={`bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors mt-2 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                        disabled={loading}
                     >
-                        Log In
+                        {loading ? 'Logging in...' : 'Log In'}
                     </button>
                 </form>
 
@@ -97,6 +146,7 @@ const Login = () => {
                 <button 
                     onClick={handleGetStarted}
                     className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors"
+                    disabled={loading}
                 >
                     Continue as Guest
                 </button>

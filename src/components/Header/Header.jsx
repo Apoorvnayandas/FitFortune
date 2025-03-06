@@ -1,13 +1,11 @@
-import { useEffect, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import mealContext from '../../context/mealContext'
+import { useAuth } from '../../context/AuthContext.jsx'
+import ProfileMenu from './ProfileMenu'
 
 const Header = () => {
-    const { user,setuser } = useContext(mealContext)
-    useEffect(() => { 
-    },[user])
+    const { user, isAuthenticated } = useAuth()
 
-  return (
+    return (
         <nav className="flex-between h-[10vh] border-b-[1px] px-8">
             <NavLink to="/" >
                 <div className="nav_logo flex-center gap-2 cursor-pointer">
@@ -48,9 +46,9 @@ const Header = () => {
                 </li>
             </ul>
             <div className="nav_auth text-xl">
-                
-            {
-                    localStorage.getItem('login') !== 'true'  ? 
+                {isAuthenticated ? (
+                    <ProfileMenu />
+                ) : (
                     <>
                         <button className='cursor-pointer hover:scale-110 transition-transform rounded-full px-5 py-2 text-gray-600 font-semibold mr-2'>
                             <NavLink to="/login">
@@ -63,24 +61,10 @@ const Header = () => {
                             </NavLink>
                         </button>
                     </>
-                    :
-                    <button className='cursor-pointer hover:scale-110 transition-transform border-[1px] bg-green-500 shadow-lg rounded-full px-5 py-2 text-white font-semibold hover:bg-green-600' onClick={() => {
-                        setuser({
-                            id: 0, 
-                            email: '', 
-                            name: ''
-                        })
-                        localStorage.removeItem('login')
-                        localStorage.removeItem('id')
-                    }}>
-                        <NavLink to="/">
-                            Log Out
-                        </NavLink>
-                    </button> 
-                }
+                )}
             </div>
         </nav>
-  )
+    )
 }
 
 export default Header

@@ -1,15 +1,19 @@
 import { useState } from "react"
 import { useNavigate, NavLink } from "react-router-dom"
+import { useAuth } from "../context/AuthContext"
+import { toast } from "react-toastify"
 
-const Signup = () => {
+const Signup = ({ dbStatus }) => {
     const navigate = useNavigate()
+    const { signUp } = useAuth()
     const [formData, setFormData] = useState({
-        username: '',
+        fullName: '',
         email: '',
         password: '',
         confirmPassword: ''
     })
     const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
         setFormData({
@@ -19,11 +23,11 @@ const Signup = () => {
         setError('') // Clear error when user types
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         
         // Validation
-        if (!formData.username || !formData.email || !formData.password || !formData.confirmPassword) {
+        if (!formData.fullName || !formData.email || !formData.password || !formData.confirmPassword) {
             setError('Please fill in all fields')
             return
         }
@@ -43,20 +47,67 @@ const Signup = () => {
             return
         }
 
-        // Store credentials (In a real app, this would be an API call)
-        localStorage.setItem('username', formData.username)
-        localStorage.setItem('password', formData.password)
-        localStorage.setItem('email', formData.email)
+        setLoading(true)
         
-        // Redirect to login
-        navigate('/login')
+        try {
+            // Use the authentication service to sign up
+            const userData = {
+                fullName: formData.fullName
+            }
+            
+            const { success, error, user } = await signUp(formData.email, formData.password, userData)
+            
+            if (success) {
+                toast.success('Account created successfully! Please check your email to confirm your account.', {
+                    position: 'top-right',
+                    autoClose: 5000
+                })
+                navigate('/login')
+            } else {
+                setError(error || 'Failed to create account')
+                toast.error('Account creation failed. Please try again.', {
+                    position: 'top-right',
+                    autoClose: 3000
+                })
+            }
+        } catch (err) {
+            setError(err.message || 'An error occurred during signup')
+            toast.error('Account creation failed. Please try again later.', {
+                position: 'top-right',
+                autoClose: 3000
+            })
+        } finally {
+            setLoading(false)
+        }
     }
 
     const handleGetStarted = () => {
-        localStorage.setItem('login', 'true')
-        localStorage.setItem('id', 'guest')
-        navigate('/meal-planner')
+        // For demo purposes, we'll use local storage for guest mode
+        localStorage.setItem('guestMode', 'true')
+        toast.info('Continuing as guest. Some features may be limited.', {
+            position: 'top-right',
+            autoClose: 3000
+        })
+        navigate('/dashboard')
     }
+
+    // Show database status message if there's an error
+    const showDbMessage = dbStatus?.error && (
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+            <div className="flex">
+                <div className="flex-shrink-0">
+                    <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                </div>
+                <div className="ml-3">
+                    <p className="text-sm text-yellow-700">
+                        {dbStatus.error}
+                    </p>
+                </div>
+            </div>
+        </div>
+    )
 
     return (
         <div className="w-full min-h-[85vh] overflow-hidden grid place-content-center">
@@ -65,16 +116,19 @@ const Signup = () => {
                     Create Your FitFortune Account
                 </h1>
                 
+                {showDbMessage}
+                
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div className="form-group">
-                        <label className="block text-gray-600 mb-2">Username</label>
+                        <label className="block text-gray-600 mb-2">Full Name</label>
                         <input 
                             type="text"
-                            name="username"
-                            value={formData.username}
+                            name="fullName"
+                            value={formData.fullName}
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500"
-                            placeholder="Choose a username"
+                            placeholder="Enter your full name"
+                            disabled={loading}
                         />
                     </div>
 
@@ -87,6 +141,7 @@ const Signup = () => {
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500"
                             placeholder="Enter your email"
+                            disabled={loading}
                         />
                     </div>
 
@@ -99,6 +154,7 @@ const Signup = () => {
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500"
                             placeholder="Create a password"
+                            disabled={loading}
                         />
                     </div>
 
@@ -111,6 +167,7 @@ const Signup = () => {
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500"
                             placeholder="Confirm your password"
+                            disabled={loading}
                         />
                     </div>
 
@@ -122,9 +179,10 @@ const Signup = () => {
 
                     <button 
                         type="submit"
-                        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors mt-2"
+                        className={`bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors mt-2 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                        disabled={loading}
                     >
-                        Create Account
+                        {loading ? 'Creating Account...' : 'Create Account'}
                     </button>
                 </form>
 
@@ -135,6 +193,7 @@ const Signup = () => {
                 <button 
                     onClick={handleGetStarted}
                     className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors"
+                    disabled={loading}
                 >
                     Continue as Guest
                 </button>
