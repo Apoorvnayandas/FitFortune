@@ -5,8 +5,6 @@ import Header from './components/Header/Header'
 import CursorEffect from './components/common/CursorEffect'
 import databaseService from './services/databaseService'
 import supabaseService from './services/supabase.js'
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 import { DataProvider } from './context/DataContext'
 import { AuthProvider } from './context/AuthContext.jsx'
 import { NutritionProvider } from './context/NutritionContext.jsx'
@@ -24,6 +22,7 @@ const Community = lazy(() => import('./pages/Community'))
 const Dashboard = lazy(() => import('./pages/Dashboard'))
 const PersonalCheckup = lazy(() => import('./pages/PersonalCheckup'))
 const NutritionChatEmbedded = lazy(() => import('./pages/NutritionChatEmbedded'))
+const NFTMint = lazy(() => import('./pages/NFTMint'))
 
 // Loading spinner component
 const LoadingSpinner = () => (
@@ -50,15 +49,8 @@ function App() {
           setDbError('Database connection failed. Using local storage instead.')
           setOfflineMode(true)
           
-          // Show a toast notification
-          toast.error('Unable to connect to the database. Some features may be limited.', {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true
-          })
+          // Replace toast with console log
+          console.error('Unable to connect to the database. Some features may be limited.')
           
           // Still mark as initialized, just in offline mode
           setDbInitialized(true)
@@ -71,10 +63,11 @@ function App() {
         
         if (initialized) {
           console.log('Database initialized successfully')
-          toast.success('Database initialized successfully!', {
-            position: 'top-right',
-            autoClose: 3000
-          })
+          // Remove toast notification
+          // toast.success('Database initialized successfully!', {
+          //   position: 'top-right',
+          //   autoClose: 3000
+          // })
         }
       } catch (error) {
         console.error('Error initializing database:', error)
@@ -90,10 +83,8 @@ function App() {
         } else {
           // After 2 retries, just proceed in offline mode
           setDbInitialized(true)
-          toast.error('Error initializing database. Using local storage instead.', {
-            position: 'top-right',
-            autoClose: 5000
-          })
+          // Replace toast with console log
+          console.error('Error initializing database. Using local storage instead.')
         }
       }
     }
@@ -105,14 +96,16 @@ function App() {
   useEffect(() => {
     const connectionCheck = async () => {
       if (offlineMode) {
-        const isConnected = await supabaseService.testConnection()
-        if (isConnected) {
-          setOfflineMode(false)
-          setDbError(null)
-          toast.success('Connection restored!', {
-            position: 'top-right',
-            autoClose: 3000
-          })
+        try {
+          const isConnected = await supabaseService.testConnection()
+          if (isConnected) {
+            setOfflineMode(false)
+            setDbError(null)
+            // Replace toast with console log
+            console.log('Connection restored!')
+          }
+        } catch (error) {
+          console.warn("Connection check failed:", error);
         }
       }
     }
@@ -161,10 +154,11 @@ function App() {
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/checkup" element={<PersonalCheckup />} />
                         <Route path="/profile" element={<Profile />} />
+                        <Route path="/nft-mint" element={<NFTMint />} />
                       </Routes>
                     </Suspense>
                     {/* Only load cursor effect on desktop */}
-                    {window.innerWidth > 768 && <CursorEffect />}
+                    {typeof window !== 'undefined' && window.innerWidth > 768 && <CursorEffect />}
                   </>
                 } />
               </Routes>
@@ -176,19 +170,21 @@ function App() {
                   <button 
                     className="ml-2 bg-white text-red-500 px-2 py-1 rounded text-xs"
                     onClick={async () => {
-                      const isConnected = await supabaseService.testConnection()
-                      if (isConnected) {
-                        setOfflineMode(false)
-                        setDbError(null)
-                        toast.success('Connection restored!', {
-                          position: 'top-right',
-                          autoClose: 3000
-                        })
-                      } else {
-                        toast.error('Still unable to connect', {
-                          position: 'top-right',
-                          autoClose: 3000
-                        })
+                      try {
+                        const isConnected = await supabaseService.testConnection()
+                        if (isConnected) {
+                          setOfflineMode(false)
+                          setDbError(null)
+                          // Replace toast with console log
+                          console.log('Connection restored!')
+                        } else {
+                          // Replace toast with console log
+                          console.error('Still unable to connect')
+                        }
+                      } catch (error) {
+                        console.error("Connection retry error:", error);
+                        // Replace toast with console log
+                        console.error('Connection error')
                       }
                     }}
                   >
@@ -197,8 +193,8 @@ function App() {
                 </div>
               )}
               
-              {/* Toast container for notifications */}
-              <ToastContainer />
+              {/* Remove the toast container */}
+              {/* <ToastContainer /> */}
             </div>
           </BrowserRouter>
         </DataProvider>

@@ -53,6 +53,8 @@ const EggDropGame = () => {
                   padding: 20px;
                   border-radius: 10px;
                   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                  max-width: 500px;
+                  width: 90%;
               }
               button {
                   padding: 10px 20px;
@@ -80,6 +82,31 @@ const EggDropGame = () => {
                   color: #FF5722;
                   margin: 15px 0;
               }
+              .tips {
+                  background-color: #f0f8ff;
+                  border-left: 4px solid #4682b4;
+                  padding: 10px;
+                  margin-top: 15px;
+                  text-align: left;
+                  font-size: 14px;
+              }
+              .performance-chart {
+                  margin: 15px 0;
+                  height: 30px;
+                  background-color: #eee;
+                  border-radius: 5px;
+                  overflow: hidden;
+              }
+              .performance-bar {
+                  height: 100%;
+                  background: linear-gradient(90deg, #4CAF50, #FFC107, #F44336);
+                  transition: width 1s;
+              }
+              .accuracy-stat {
+                  font-weight: bold;
+                  font-size: 20px;
+                  margin: 10px 0;
+              }
           </style>
       </head>
       <body>
@@ -89,7 +116,8 @@ const EggDropGame = () => {
               <h1>Egg Drop Reflex Game</h1>
               <p>Move the basket with your mouse to catch falling eggs!</p>
               <p>The eggs will drop at unpredictable locations and speeds to test your reflexes.</p>
-              <p><strong>Warning: This game is designed to be challenging!</strong></p>
+              <p><strong>Warning: This is a challenging test of your reflexes!</strong></p>
+              <p style="color:#FF5722">Try to catch as many eggs as possible to get an accurate assessment of your reaction speed.</p>
               <button id="startButton">Start Game</button>
           </div>
           
@@ -124,7 +152,7 @@ const EggDropGame = () => {
               let catchTimes = [];
               let eggs = [];
               let lastEggTime = 0;
-              const MAX_EGGS = 5;
+              const MAX_EGGS = 5; // Increased from 5 for better assessment
               
               // DOM elements
               const startScreen = document.getElementById('startScreen');
@@ -152,7 +180,14 @@ const EggDropGame = () => {
                       this.radius = 15;
                       this.x = Math.random() * (canvas.width - 2 * this.radius) + this.radius;
                       this.y = -this.radius;
-                      this.speed = Math.random() * 5 + 7; // Faster speeds between 7-12
+                      // Increased speed range from 7-12 to 9-15
+                      this.speed = Math.random() * 6 + 12; 
+                      
+                      // Randomly add extra speed to some eggs to make it harder
+                      if (Math.random() > 0.7) {
+                          this.speed += 3;
+                      }
+                      
                       this.color = '#FFFFFF';
                       this.dropTime = Date.now();
                       this.caught = false;
@@ -235,8 +270,8 @@ const EggDropGame = () => {
                       
                       // Schedule next egg drop if not reached max
                       if (eggsDropped < MAX_EGGS) {
-                          // Very unpredictable timing - between 300ms and 1500ms
-                          const nextEggDelay = Math.random() * 1200 + 300;
+                          // Made timing more unpredictable and faster - between 250ms and 1300ms
+                          const nextEggDelay = Math.random() * 1000 + 200;
                           setTimeout(dropEgg, nextEggDelay);
                       }
                   }
@@ -307,44 +342,98 @@ const EggDropGame = () => {
                   // Calculate average reaction time
                   const avgReactionTime = totalReactionTime / catchTimes.length || 0;
                   
+                  // Calculate accuracy percentage
+                  const accuracyPercentage = Math.round((eggsCaught / MAX_EGGS) * 100);
+                  
+                  // Calculate performance score (combination of speed and accuracy)
+                  let performanceScore = 0;
+                  if (eggsCaught > 0) {
+                      // Score based on reaction time (faster = higher score)
+                      const speedScore = Math.max(0, 100 - (avgReactionTime / 15));
+                      // Score based on accuracy
+                      const accuracyScore = accuracyPercentage;
+                      // Combined score (weighted more toward accuracy)
+                      performanceScore = Math.round((speedScore * 0.4) + (accuracyScore * 0.6));
+                  }
+                  
                   // Rate the player's reflexes
                   let reflexRating = "";
                   let reflexDescription = "";
+                  let improvementTips = "";
                   
                   if (eggsCaught === 0) {
-                      reflexRating = "Unable to rate";
-                      reflexDescription = "You didn't catch any eggs! Try again.";
+                      reflexRating = "Unable to Rate 😕";
+                      reflexDescription = "You didn't catch any eggs! Let's try again for a proper assessment.";
+                      improvementTips = "Try focusing on egg positions as they appear and anticipate where they'll fall. Move the basket to that position quickly.";
+                  } else if (eggsCaught <= 2) {
+                      reflexRating = "Needs Development 🔍";
+                      reflexDescription = "Your reflexes need some work, but that's okay! Everyone starts somewhere.";
+                      improvementTips = "Focus on one area of the screen at a time. It's easier to catch eggs when your attention isn't divided.";
                   } else if (avgReactionTime < 400) {
-                      reflexRating = "Superhuman! 🚀";
-                      reflexDescription = "Your reflexes are incredibly fast! Professional gamer level!";
+                      reflexRating = "Superhuman Reflexes! 🚀";
+                      reflexDescription = "Your reflexes are incredibly fast! Professional athlete or gamer level!";
+                      improvementTips = "You're at the top level! To maintain this, try exercises that challenge your peripheral vision and hand-eye coordination.";
                   } else if (avgReactionTime < 550) {
                       reflexRating = "Lightning Fast! ⚡";
-                      reflexDescription = "Your reflexes are exceptionally quick! Top tier!";
+                      reflexDescription = "Your reflexes are exceptionally quick! Top tier performance.";
+                      improvementTips = "To get even better, try playing at different times of day to see when your reflexes are at their peak.";
                   } else if (avgReactionTime < 700) {
-                      reflexRating = "Very Quick! 🏆";
-                      reflexDescription = "Great reflexes! You're faster than most people.";
+                      reflexRating = "Very Quick Reactions! 🏆";
+                      reflexDescription = "Great reflexes! You're faster than most people. Your fitness journey is clearly paying off.";
+                      improvementTips = "To improve further, make sure you're well-rested and hydrated, as both factors affect reaction time.";
                   } else if (avgReactionTime < 850) {
                       reflexRating = "Good Reflexes! 🥇";
-                      reflexDescription = "Above average reaction time. Well done!";
+                      reflexDescription = "Above average reaction time. Your fitness routine is helping your neurological responses!";
+                      improvementTips = "Regular cardiovascular exercise can help improve reaction time. Adding quick footwork drills to your routine could help.";
                   } else if (avgReactionTime < 1000) {
-                      reflexRating = "Decent Reflexes 🥈";
-                      reflexDescription = "Your reflexes are about average. Not bad!";
+                      reflexRating = "Lightning Fast! ⚡";
+                      reflexDescription = "Your reflexes are exceptionally quick! Top tier performance.";
+                      improvementTips = "To get even better, try playing at different times of day to see when your reflexes are at their peak.";;
                   } else if (avgReactionTime < 1200) {
                       reflexRating = "Average Reflexes 🥉";
-                      reflexDescription = "Room for improvement, but still decent.";
+                      reflexDescription = "Room for improvement, but your reflexes are functioning well. Keep at it!";
+                      improvementTips = "Balance exercises can improve reaction time by enhancing your proprioception (awareness of body position).";
                   } else {
                       reflexRating = "Could Use Some Practice 🏃";
-                      reflexDescription = "Keep practicing to improve your reaction time!";
+                      reflexDescription = "Your reaction time is slower than average, but improvement comes with practice!";
+                      improvementTips = "Start with slower-paced reaction games and gradually increase the difficulty as you improve.";
+                  }
+                  
+                  // Add consistency assessment
+                  let consistencyFeedback = "";
+                  if (catchTimes.length > 1) {
+                      // Calculate standard deviation of reaction times
+                      const mean = avgReactionTime;
+                      const variance = catchTimes.reduce((total, time) => total + Math.pow(time - mean, 2), 0) / catchTimes.length;
+                      const stdDev = Math.sqrt(variance);
+                      
+                      if (stdDev < 100) {
+                          consistencyFeedback = "<p><strong>Excellent consistency!</strong> Your reaction times are very stable, showing great focus throughout.</p>";
+                      } else if (stdDev < 200) {
+                          consistencyFeedback = "<p><strong>Good consistency.</strong> Your reaction times were fairly stable.</p>";
+                      } else {
+                          consistencyFeedback = "<p><strong>Inconsistent reactions.</strong> Your times varied significantly, which could indicate fatigue or distraction during the test.</p>";
+                      }
                   }
                   
                   // Display results
                   resultDetails.innerHTML = \`
+                      <p class="accuracy-stat">Accuracy: \${accuracyPercentage}%</p>
+                      <div class="performance-chart">
+                          <div class="performance-bar" style="width: \${accuracyPercentage}%"></div>
+                      </div>
                       <p>Eggs Caught: \${eggsCaught} out of \${MAX_EGGS}</p>
                       <p>Average Reaction Time: \${Math.round(avgReactionTime)} ms</p>
                       <div class="rating">\${reflexRating}</div>
                       <p>\${reflexDescription}</p>
+                      \${consistencyFeedback}
+                      <div class="tips">
+                          <strong>💡 Tips for Improvement:</strong>
+                          <p>\${improvementTips}</p>
+                      </div>
                       \${catchTimes.length > 0 ? 
                         \`<p>Your reaction times: \${catchTimes.map(t => Math.round(t) + 'ms').join(', ')}</p>\` : ''}
+                      <p>Performance Score: \${performanceScore}/100</p>
                   \`;
                   
                   resultScreen.style.display = 'block';
@@ -378,11 +467,15 @@ const EggDropGame = () => {
       <div className="mb-6">
         <p className="text-gray-700 mb-4">
           <strong>How to play:</strong> Move your mouse to control the basket and catch falling eggs.
-          The game will measure your reaction time and provide a rating of your reflexes based on how quickly you respond.
+          The game will measure your reaction time and provide a detailed analysis of your reflexes based on how quickly you respond.
         </p>
         <p className="text-gray-700 mb-4">
           This game tests continuous reaction time and hand-eye coordination, which are important skills for sports, 
           driving, and everyday tasks that require quick physical responses to visual stimuli.
+        </p>
+        <p className="text-gray-700 mb-4">
+          <strong>Fitness Connection:</strong> Quick reflexes are a key indicator of neurological health and can improve with
+          regular exercise. Faster reaction times are associated with better overall fitness and cognitive function.
         </p>
       </div>
       

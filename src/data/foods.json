@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Fruit 1",
+    "name": "Apple",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -23,7 +23,7 @@
   },
   {
     "id": 2,
-    "name": "Vegetable 2",
+    "name": "Broccoli",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -45,7 +45,7 @@
   },
   {
     "id": 3,
-    "name": "Protein 3",
+    "name": "Chicken Breast",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -67,7 +67,7 @@
   },
   {
     "id": 4,
-    "name": "Grain 4",
+    "name": "Rice",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -89,7 +89,7 @@
   },
   {
     "id": 5,
-    "name": "Dairy 5",
+    "name": "Milk",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -111,7 +111,7 @@
   },
   {
     "id": 6,
-    "name": "Snack 6",
+    "name": "Almonds",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -133,7 +133,7 @@
   },
   {
     "id": 7,
-    "name": "Fruit 7",
+    "name": "Banana",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -155,7 +155,7 @@
   },
   {
     "id": 8,
-    "name": "Vegetable 8",
+    "name": "Spinach",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -177,7 +177,7 @@
   },
   {
     "id": 9,
-    "name": "Protein 9",
+    "name": "Salmon",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -199,7 +199,7 @@
   },
   {
     "id": 10,
-    "name": "Grain 10",
+    "name": "Wheat",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -221,7 +221,7 @@
   },
   {
     "id": 11,
-    "name": "Dairy 11",
+    "name": "Yogurt",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -243,7 +243,7 @@
   },
   {
     "id": 12,
-    "name": "Snack 12",
+    "name": "Walnuts",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -265,7 +265,7 @@
   },
   {
     "id": 13,
-    "name": "Fruit 13",
+    "name": "Orange",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -287,7 +287,7 @@
   },
   {
     "id": 14,
-    "name": "Vegetable 14",
+    "name": "Kale",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -309,7 +309,7 @@
   },
   {
     "id": 15,
-    "name": "Protein 15",
+    "name": "Tuna",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -331,7 +331,7 @@
   },
   {
     "id": 16,
-    "name": "Grain 16",
+    "name": "Oats",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -353,7 +353,7 @@
   },
   {
     "id": 17,
-    "name": "Dairy 17",
+    "name": "Cheese",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -375,7 +375,7 @@
   },
   {
     "id": 18,
-    "name": "Snack 18",
+    "name": "Popcorn",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -397,7 +397,7 @@
   },
   {
     "id": 19,
-    "name": "Fruit 19",
+    "name": "Strawberry",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -419,7 +419,7 @@
   },
   {
     "id": 20,
-    "name": "Vegetable 20",
+    "name": "Bell Pepper",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -441,7 +441,7 @@
   },
   {
     "id": 21,
-    "name": "Protein 21",
+    "name": "Tofu",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -463,7 +463,7 @@
   },
   {
     "id": 22,
-    "name": "Grain 22",
+    "name": "Barley",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -485,7 +485,7 @@
   },
   {
     "id": 23,
-    "name": "Dairy 23",
+    "name": "Butter",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -507,7 +507,7 @@
   },
   {
     "id": 24,
-    "name": "Snack 24",
+    "name": "Dark Chocolate",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -529,7 +529,7 @@
   },
   {
     "id": 25,
-    "name": "Fruit 25",
+    "name": "Blueberry",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -551,7 +551,7 @@
   },
   {
     "id": 26,
-    "name": "Vegetable 26",
+    "name": "Carrot",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -573,7 +573,7 @@
   },
   {
     "id": 27,
-    "name": "Protein 27",
+    "name": "Turkey Breast",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -595,7 +595,7 @@
   },
   {
     "id": 28,
-    "name": "Grain 28",
+    "name": "Millet",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -617,7 +617,7 @@
   },
   {
     "id": 29,
-    "name": "Dairy 29",
+    "name": "Cream",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -639,7 +639,7 @@
   },
   {
     "id": 30,
-    "name": "Snack 30",
+    "name": "Trail Mix",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -661,7 +661,7 @@
   },
   {
     "id": 31,
-    "name": "Fruit 31",
+    "name": "Mango",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -683,7 +683,7 @@
   },
   {
     "id": 32,
-    "name": "Vegetable 32",
+    "name": "Cucumber",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -705,7 +705,7 @@
   },
   {
     "id": 33,
-    "name": "Protein 33",
+    "name": "Beef",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -727,7 +727,7 @@
   },
   {
     "id": 34,
-    "name": "Grain 34",
+    "name": "Rye",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -749,7 +749,7 @@
   },
   {
     "id": 35,
-    "name": "Dairy 35",
+    "name": "Sour Cream",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -771,7 +771,7 @@
   },
   {
     "id": 36,
-    "name": "Snack 36",
+    "name": "Granola Bar",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -793,7 +793,7 @@
   },
   {
     "id": 37,
-    "name": "Fruit 37",
+    "name": "Pineapple",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -815,7 +815,7 @@
   },
   {
     "id": 38,
-    "name": "Vegetable 38",
+    "name": "Cauliflower",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -837,7 +837,7 @@
   },
   {
     "id": 39,
-    "name": "Protein 39",
+    "name": "Pork",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -859,7 +859,7 @@
   },
   {
     "id": 40,
-    "name": "Grain 40",
+    "name": "Quinoa",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -881,7 +881,7 @@
   },
   {
     "id": 41,
-    "name": "Dairy 41",
+    "name": "Cottage Cheese",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -903,7 +903,7 @@
   },
   {
     "id": 42,
-    "name": "Snack 42",
+    "name": "Protein Bar",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -925,7 +925,7 @@
   },
   {
     "id": 43,
-    "name": "Fruit 43",
+    "name": "Kiwi",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -947,7 +947,7 @@
   },
   {
     "id": 44,
-    "name": "Vegetable 44",
+    "name": "Celery",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -969,29 +969,29 @@
   },
   {
     "id": 45,
-    "name": "Protein 45",
+    "name": "Eggs",
     "category": "proteins",
-    "servingSize": "100g",
-    "calories": 200,
+    "servingSize": "1 serving",
+    "calories": 180,
     "macros": {
-      "protein": 25,
-      "carbs": 0,
+      "protein": 4,
+      "carbs": 22,
       "fats": 10,
-      "fiber": 0
+      "fiber": 2
     },
     "micronutrients": {
-      "vitamin_a": 0,
-      "vitamin_c": 0,
-      "calcium": 20,
-      "iron": 2
+      "vitamin_a": 20,
+      "vitamin_c": 10,
+      "calcium": 50,
+      "iron": 0.5
     },
-    "glycemicIndex": 0,
+    "glycemicIndex": 60,
     "allergens": [],
     "imageUrl": "http://example.com/food45.jpg"
   },
   {
     "id": 46,
-    "name": "Grain 46",
+    "name": "Buckwheat",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -1013,7 +1013,7 @@
   },
   {
     "id": 47,
-    "name": "Dairy 47",
+    "name": "Kefir",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -1035,7 +1035,7 @@
   },
   {
     "id": 48,
-    "name": "Snack 48",
+    "name": "Protein Chips",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -1057,7 +1057,7 @@
   },
   {
     "id": 49,
-    "name": "Fruit 49",
+    "name": "Watermelon",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -1075,121 +1075,11 @@
     },
     "glycemicIndex": 40,
     "allergens": [],
-    "imageUrl": "http://example.com/food49.jpg"
-  },
-  {
-    "id": 50,
-    "name": "Vegetable 50",
-    "category": "vegetables",
-    "servingSize": "1 cup raw",
-    "calories": 50,
-    "macros": {
-      "protein": 2,
-      "carbs": 10,
-      "fats": 0.2,
-      "fiber": 2
-    },
-    "micronutrients": {
-      "vitamin_a": 100,
-      "vitamin_c": 80,
-      "calcium": 30,
-      "iron": 1
-    },
-    "glycemicIndex": 15,
-    "allergens": [],
-    "imageUrl": "http://example.com/food50.jpg"
-  },
-  {
-    "id": 51,
-    "name": "Protein 51",
-    "category": "proteins",
-    "servingSize": "100g",
-    "calories": 200,
-    "macros": {
-      "protein": 25,
-      "carbs": 0,
-      "fats": 10,
-      "fiber": 0
-    },
-    "micronutrients": {
-      "vitamin_a": 0,
-      "vitamin_c": 0,
-      "calcium": 20,
-      "iron": 2
-    },
-    "glycemicIndex": 0,
-    "allergens": [],
-    "imageUrl": "http://example.com/food51.jpg"
-  },
-  {
-    "id": 52,
-    "name": "Grain 52",
-    "category": "grains",
-    "servingSize": "1 cup cooked",
-    "calories": 220,
-    "macros": {
-      "protein": 5,
-      "carbs": 45,
-      "fats": 2,
-      "fiber": 5
-    },
-    "micronutrients": {
-      "vitamin_a": 0,
-      "vitamin_c": 0,
-      "calcium": 10,
-      "iron": 1.5
-    },
-    "glycemicIndex": 70,
-    "allergens": ["gluten"],
-    "imageUrl": "http://example.com/food52.jpg"
-  },
-  {
-    "id": 53,
-    "name": "Dairy 53",
-    "category": "dairy",
-    "servingSize": "1 cup",
-    "calories": 150,
-    "macros": {
-      "protein": 8,
-      "carbs": 12,
-      "fats": 8,
-      "fiber": 0
-    },
-    "micronutrients": {
-      "vitamin_a": 150,
-      "vitamin_c": 2,
-      "calcium": 300,
-      "iron": 0.1
-    },
-    "glycemicIndex": 30,
-    "allergens": ["lactose"],
-    "imageUrl": "http://example.com/food53.jpg"
-  },
-  {
-    "id": 54,
-    "name": "Snack 54",
-    "category": "snacks",
-    "servingSize": "1 serving",
-    "calories": 180,
-    "macros": {
-      "protein": 4,
-      "carbs": 22,
-      "fats": 10,
-      "fiber": 2
-    },
-    "micronutrients": {
-      "vitamin_a": 20,
-      "vitamin_c": 10,
-      "calcium": 50,
-      "iron": 0.5
-    },
-    "glycemicIndex": 60,
-    "allergens": [],
     "imageUrl": "http://example.com/food54.jpg"
   },
   {
     "id": 55,
-    "name": "Fruit 55",
+    "name": "Grapefruit",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -1211,7 +1101,7 @@
   },
   {
     "id": 56,
-    "name": "Vegetable 56",
+    "name": "Asparagus",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -1233,7 +1123,7 @@
   },
   {
     "id": 57,
-    "name": "Protein 57",
+    "name": "Lamb",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -1255,7 +1145,7 @@
   },
   {
     "id": 58,
-    "name": "Grain 58",
+    "name": "Amaranth",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -1277,7 +1167,7 @@
   },
   {
     "id": 59,
-    "name": "Dairy 59",
+    "name": "Whipped Cream",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -1299,7 +1189,7 @@
   },
   {
     "id": 60,
-    "name": "Snack 60",
+    "name": "Granola",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -1321,7 +1211,7 @@
   },
   {
     "id": 61,
-    "name": "Fruit 61",
+    "name": "Passion Fruit",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -1343,7 +1233,7 @@
   },
   {
     "id": 62,
-    "name": "Vegetable 62",
+    "name": "Eggplant",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -1365,7 +1255,7 @@
   },
   {
     "id": 63,
-    "name": "Protein 63",
+    "name": "Venison",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -1387,7 +1277,7 @@
   },
   {
     "id": 64,
-    "name": "Grain 64",
+    "name": "Farro",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -1409,7 +1299,7 @@
   },
   {
     "id": 65,
-    "name": "Dairy 65",
+    "name": "Ricotta",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -1431,7 +1321,7 @@
   },
   {
     "id": 66,
-    "name": "Snack 66",
+    "name": "Hummus",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -1453,7 +1343,7 @@
   },
   {
     "id": 67,
-    "name": "Fruit 67",
+    "name": "Pear",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -1475,7 +1365,7 @@
   },
   {
     "id": 68,
-    "name": "Vegetable 68",
+    "name": "Tomato",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -1497,7 +1387,7 @@
   },
   {
     "id": 69,
-    "name": "Protein 69",
+    "name": "Duck",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -1519,7 +1409,7 @@
   },
   {
     "id": 70,
-    "name": "Grain 70",
+    "name": "Spelt",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -1541,7 +1431,7 @@
   },
   {
     "id": 71,
-    "name": "Dairy 71",
+    "name": "Mozzarella",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -1563,7 +1453,7 @@
   },
   {
     "id": 72,
-    "name": "Snack 72",
+    "name": "Pita Chips",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -1585,7 +1475,7 @@
   },
   {
     "id": 73,
-    "name": "Fruit 73",
+    "name": "Plum",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -1607,7 +1497,7 @@
   },
   {
     "id": 74,
-    "name": "Vegetable 74",
+    "name": "Sweet Potato",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -1629,7 +1519,7 @@
   },
   {
     "id": 75,
-    "name": "Protein 75",
+    "name": "Tilapia",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -1651,7 +1541,7 @@
   },
   {
     "id": 76,
-    "name": "Grain 76",
+    "name": "Bulgur",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -1673,7 +1563,7 @@
   },
   {
     "id": 77,
-    "name": "Dairy 77",
+    "name": "Cheddar",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -1695,7 +1585,7 @@
   },
   {
     "id": 78,
-    "name": "Snack 78",
+    "name": "Rice Cakes",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -1717,7 +1607,7 @@
   },
   {
     "id": 79,
-    "name": "Fruit 79",
+    "name": "Apricot",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -1739,7 +1629,7 @@
   },
   {
     "id": 80,
-    "name": "Vegetable 80",
+    "name": "Brussels Sprouts",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -1761,7 +1651,7 @@
   },
   {
     "id": 81,
-    "name": "Protein 81",
+    "name": "Scallops",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -1783,7 +1673,7 @@
   },
   {
     "id": 82,
-    "name": "Grain 82",
+    "name": "Wild Rice",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -1805,7 +1695,7 @@
   },
   {
     "id": 83,
-    "name": "Dairy 83",
+    "name": "Parmesan",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -1827,7 +1717,7 @@
   },
   {
     "id": 84,
-    "name": "Snack 84",
+    "name": "Energy Balls",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -1849,7 +1739,7 @@
   },
   {
     "id": 85,
-    "name": "Fruit 85",
+    "name": "Dragon Fruit",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -1871,7 +1761,7 @@
   },
   {
     "id": 86,
-    "name": "Vegetable 86",
+    "name": "Onion",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -1893,7 +1783,7 @@
   },
   {
     "id": 87,
-    "name": "Protein 87",
+    "name": "Crab",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -1915,7 +1805,7 @@
   },
   {
     "id": 88,
-    "name": "Grain 88",
+    "name": "Sorghum",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -1937,7 +1827,7 @@
   },
   {
     "id": 89,
-    "name": "Dairy 89",
+    "name": "Buttermilk",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -1959,7 +1849,7 @@
   },
   {
     "id": 90,
-    "name": "Snack 90",
+    "name": "Beef Jerky",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -1981,7 +1871,7 @@
   },
   {
     "id": 91,
-    "name": "Fruit 91",
+    "name": "Cantaloupe",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -2003,7 +1893,7 @@
   },
   {
     "id": 92,
-    "name": "Vegetable 92",
+    "name": "Beetroot",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -2025,7 +1915,7 @@
   },
   {
     "id": 93,
-    "name": "Protein 93",
+    "name": "Cod",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -2047,7 +1937,7 @@
   },
   {
     "id": 94,
-    "name": "Grain 94",
+    "name": "Freekeh",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -2069,7 +1959,7 @@
   },
   {
     "id": 95,
-    "name": "Dairy 95",
+    "name": "Cream Cheese",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -2091,7 +1981,7 @@
   },
   {
     "id": 96,
-    "name": "Snack 96",
+    "name": "Kale Chips",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -2113,7 +2003,7 @@
   },
   {
     "id": 97,
-    "name": "Fruit 97",
+    "name": "Pomegranate",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -2135,7 +2025,7 @@
   },
   {
     "id": 98,
-    "name": "Vegetable 98",
+    "name": "Bok Choy",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,
@@ -2157,7 +2047,7 @@
   },
   {
     "id": 99,
-    "name": "Protein 99",
+    "name": "Lobster",
     "category": "proteins",
     "servingSize": "100g",
     "calories": 200,
@@ -2179,7 +2069,7 @@
   },
   {
     "id": 100,
-    "name": "Grain 100",
+    "name": "Kamut",
     "category": "grains",
     "servingSize": "1 cup cooked",
     "calories": 220,
@@ -2201,7 +2091,7 @@
   },
   {
     "id": 101,
-    "name": "Dairy 101",
+    "name": "Goat Cheese",
     "category": "dairy",
     "servingSize": "1 cup",
     "calories": 150,
@@ -2223,7 +2113,7 @@
   },
   {
     "id": 102,
-    "name": "Snack 102",
+    "name": "Seaweed Snacks",
     "category": "snacks",
     "servingSize": "1 serving",
     "calories": 180,
@@ -2245,7 +2135,7 @@
   },
   {
     "id": 103,
-    "name": "Fruit 103",
+    "name": "Fig",
     "category": "fruits",
     "servingSize": "1 medium",
     "calories": 80,
@@ -2267,7 +2157,7 @@
   },
   {
     "id": 104,
-    "name": "Vegetable 104",
+    "name": "Zucchini",
     "category": "vegetables",
     "servingSize": "1 cup raw",
     "calories": 50,

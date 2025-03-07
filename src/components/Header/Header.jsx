@@ -13,7 +13,7 @@ const Header = () => {
                     <img src="/assets/logo.svg" width={50} alt="FitFortune logo" />
                 </div>
             </NavLink>
-            <ul className="nav_links flex-between w-[50%]">
+            <ul className="nav_links flex-between w-[56%]">
                 <li className='text-lg text-gray-600 font-semibold hover:text-green-500 transition-colors'>
                     <NavLink to="/meal-planner" className={({isActive}) => isActive ? "text-green-500 font-bold" : ""}>
                         Meal Plans
@@ -42,6 +42,11 @@ const Header = () => {
                 <li className='text-lg text-gray-600 font-semibold hover:text-green-500 transition-colors'>
                     <NavLink to="/community" className={({isActive}) => isActive ? "text-green-500 font-bold" : ""}>
                         Community
+                    </NavLink>
+                </li>
+                <li className='text-lg text-gray-600 font-semibold hover:text-green-500 transition-colors'>
+                    <NavLink to="/nft-mint" className={({isActive}) => isActive ? "text-green-500 font-bold" : ""}>
+                        NFT Challenge 
                     </NavLink>
                 </li>
             </ul>

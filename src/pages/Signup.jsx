@@ -1,7 +1,6 @@
-import { useState } from "react"
-import { useNavigate, NavLink } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { Link, useNavigate, NavLink } from "react-router-dom"
 import { useAuth } from "../context/AuthContext"
-import { toast } from "react-toastify"
 
 const Signup = ({ dbStatus }) => {
     const navigate = useNavigate()
@@ -58,24 +57,15 @@ const Signup = ({ dbStatus }) => {
             const { success, error, user } = await signUp(formData.email, formData.password, userData)
             
             if (success) {
-                toast.success('Account created successfully! Please check your email to confirm your account.', {
-                    position: 'top-right',
-                    autoClose: 5000
-                })
+                console.log('Account created successfully! Please check your email to confirm your account.')
                 navigate('/login')
             } else {
                 setError(error || 'Failed to create account')
-                toast.error('Account creation failed. Please try again.', {
-                    position: 'top-right',
-                    autoClose: 3000
-                })
+                console.error(error || 'Account creation failed. Please try again.')
             }
         } catch (err) {
             setError(err.message || 'An error occurred during signup')
-            toast.error('Account creation failed. Please try again later.', {
-                position: 'top-right',
-                autoClose: 3000
-            })
+            console.error(err.message || 'Account creation failed. Please try again later.')
         } finally {
             setLoading(false)
         }
@@ -84,10 +74,7 @@ const Signup = ({ dbStatus }) => {
     const handleGetStarted = () => {
         // For demo purposes, we'll use local storage for guest mode
         localStorage.setItem('guestMode', 'true')
-        toast.info('Continuing as guest. Some features may be limited.', {
-            position: 'top-right',
-            autoClose: 3000
-        })
+        console.info('Continuing as guest. Some features may be limited.')
         navigate('/dashboard')
     }
 

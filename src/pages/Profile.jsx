@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
-import { toast } from 'react-toastify';
 
 const Profile = () => {
   const { user, profile, updateProfile, signOut } = useAuth();
@@ -55,12 +54,12 @@ const Profile = () => {
       });
 
       if (success) {
-        toast.success('Profile updated successfully!');
+        console.log('Profile updated successfully!');
       } else {
-        toast.error(`Failed to update profile: ${error}`);
+        console.error(`Failed to update profile: ${error}`);
       }
     } catch (error) {
-      toast.error('An error occurred while updating your profile');
+      console.error('An error occurred while updating your profile');
       console.error('Profile update error:', error);
     } finally {
       setLoading(false);
@@ -72,9 +71,9 @@ const Profile = () => {
     try {
       await signOut();
       navigate('/');
-      toast.info('You have been logged out');
+      console.info('You have been logged out');
     } catch (error) {
-      toast.error('Failed to log out');
+      console.error('Failed to log out');
       console.error('Logout error:', error);
     }
   };

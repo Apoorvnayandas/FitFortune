@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { useNavigate, NavLink } from "react-router-dom"
 import { useAuth } from "../context/AuthContext"
-import { toast } from "react-toastify"
 
 const Login = ({ dbStatus }) => {
     const navigate = useNavigate()
@@ -37,24 +36,15 @@ const Login = ({ dbStatus }) => {
             const { success, error, user } = await signIn(formData.email, formData.password)
             
             if (success) {
-                toast.success('Login successful!', {
-                    position: 'top-right',
-                    autoClose: 2000
-                })
+                console.log('Login successful!')
                 navigate('/dashboard')
             } else {
                 setError(error || 'Invalid email or password')
-                toast.error('Login failed. Please check your credentials.', {
-                    position: 'top-right',
-                    autoClose: 3000
-                })
+                console.error('Login failed')
             }
         } catch (err) {
             setError(err.message || 'An error occurred during login')
-            toast.error('Login failed. Please try again later.', {
-                position: 'top-right',
-                autoClose: 3000
-            })
+            console.error('Login failed')
         } finally {
             setLoading(false)
         }
@@ -63,10 +53,7 @@ const Login = ({ dbStatus }) => {
     const handleGetStarted = () => {
         // For demo purposes, we'll use local storage for guest mode
         localStorage.setItem('guestMode', 'true')
-        toast.info('Continuing as guest. Some features may be limited.', {
-            position: 'top-right',
-            autoClose: 3000
-        })
+        console.info('Continuing as guest. Some features may be limited.')
         navigate('/dashboard')
     }
 

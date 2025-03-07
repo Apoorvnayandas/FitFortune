@@ -12,7 +12,7 @@ const TrafficLightGame = () => {
     // Create iframe to contain the game
     const iframe = document.createElement('iframe');
     iframe.style.width = '100%';
-    iframe.style.height = '600px';
+    iframe.style.height = '500px'; // Reduced height to make it more compact
     iframe.style.border = 'none';
     iframe.style.borderRadius = '8px';
     iframe.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
@@ -38,50 +38,78 @@ const TrafficLightGame = () => {
                   display: flex;
                   flex-direction: column;
                   align-items: center;
-                  justify-content: center;
+                  justify-content: flex-start;
                   height: 100vh;
                   margin: 0;
                   background-color: #222;
                   color: #fff;
                   transition: background-color 0.3s;
+                  padding: 10px;
+                  box-sizing: border-box;
+                  overflow: hidden;
               }
               
               .game-container {
                   text-align: center;
                   width: 100%;
                   max-width: 600px;
-                  padding: 20px;
+                  padding: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
               }
               
               h1 {
-                  margin-bottom: 30px;
+                  margin-bottom: 10px;
                   color: #f8f8f8;
                   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+                  font-size: 24px;
               }
               
               #instructions {
-                  font-size: 18px;
-                  margin-bottom: 30px;
-                  line-height: 1.5;
+                  font-size: 14px;
+                  margin-bottom: 15px;
+                  line-height: 1.3;
+              }
+              
+              .game-layout {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
+                  gap: 20px;
+              }
+              
+              .left-side {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+              }
+              
+              .right-side {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  min-width: 200px;
               }
               
               #traffic-light {
                   display: flex;
                   flex-direction: column;
                   align-items: center;
-                  margin: 20px auto;
+                  margin: 10px auto;
                   background-color: #333;
                   padding: 10px;
                   border-radius: 10px;
-                  width: 100px;
+                  width: 80px;
                   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
               }
               
               .light {
-                  width: 80px;
-                  height: 80px;
+                  width: 60px;
+                  height: 60px;
                   border-radius: 50%;
-                  margin: 10px;
+                  margin: 5px;
                   background-color: #555;
                   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
                   transition: background-color 0.3s;
@@ -103,16 +131,16 @@ const TrafficLightGame = () => {
               }
               
               #reaction-button {
-                  width: 200px;
-                  height: 200px;
+                  width: 150px;
+                  height: 150px;
                   border-radius: 50%;
                   border: none;
                   background-color: #e74c3c;
                   color: white;
-                  font-size: 24px;
+                  font-size: 20px;
                   font-weight: bold;
                   cursor: pointer;
-                  margin: 30px auto;
+                  margin: 10px auto;
                   display: block;
                   box-shadow: 0 0 20px rgba(231, 76, 60, 0.7);
                   transition: transform 0.1s, box-shadow 0.1s;
@@ -125,16 +153,16 @@ const TrafficLightGame = () => {
               }
               
               #result {
-                  font-size: 22px;
-                  margin: 20px 0;
-                  min-height: 60px;
+                  font-size: 18px;
+                  margin: 10px 0;
+                  min-height: 25px;
               }
               
               #feedback {
-                  font-size: 24px;
+                  font-size: 20px;
                   font-weight: bold;
-                  margin: 10px 0;
-                  min-height: 30px;
+                  margin: 5px 0;
+                  min-height: 25px;
                   color: #3498db;
               }
               
@@ -148,14 +176,14 @@ const TrafficLightGame = () => {
               }
               
               #start-button {
-                  padding: 12px 24px;
+                  padding: 10px 20px;
                   background-color: #3498db;
                   color: white;
                   border: none;
                   border-radius: 5px;
-                  font-size: 18px;
+                  font-size: 16px;
                   cursor: pointer;
-                  margin-top: 20px;
+                  margin-top: 10px;
                   transition: background-color 0.2s;
               }
               
@@ -166,6 +194,28 @@ const TrafficLightGame = () => {
               .hidden {
                   display: none !important;
               }
+              
+              @media (max-width: 600px) {
+                  .game-layout {
+                      flex-direction: column;
+                  }
+                  
+                  #reaction-button {
+                      width: 120px;
+                      height: 120px;
+                      font-size: 16px;
+                  }
+                  
+                  .light {
+                      width: 50px;
+                      height: 50px;
+                      margin: 4px;
+                  }
+                  
+                  #traffic-light {
+                      width: 70px;
+                  }
+              }
           </style>
       </head>
       <body>
@@ -173,24 +223,28 @@ const TrafficLightGame = () => {
               <h1>Traffic Light Reaction Game</h1>
               
               <div id="instructions">
-                  <p>Press and hold the red button. Watch the traffic light!</p>
-                  <p>When the light turns GREEN, release the button as quickly as possible!</p>
-                  <p>We'll measure how fast you react and tell you how good your reflexes are.</p>
+                  <p>Press and hold the button. Release when the light turns GREEN!</p>
               </div>
               
-              <div id="traffic-light">
-                  <div id="red-light" class="light"></div>
-                  <div id="yellow-light" class="light"></div>
-                  <div id="green-light" class="light"></div>
-              </div>
-              
-              <button id="start-button">Start Game</button>
-              
-              <div id="game-area" class="hidden">
-                  <button id="reaction-button">HOLD ME</button>
+              <div class="game-layout">
+                  <div class="left-side">
+                      <div id="traffic-light">
+                          <div id="red-light" class="light"></div>
+                          <div id="yellow-light" class="light"></div>
+                          <div id="green-light" class="light"></div>
+                      </div>
+                  </div>
                   
-                  <div id="result"></div>
-                  <div id="feedback"></div>
+                  <div class="right-side">
+                      <button id="start-button">Start Game</button>
+                      
+                      <div id="game-area" class="hidden">
+                          <button id="reaction-button">HOLD ME</button>
+                      </div>
+                      
+                      <div id="result"></div>
+                      <div id="feedback"></div>
+                  </div>
               </div>
           </div>
           
@@ -235,8 +289,8 @@ const TrafficLightGame = () => {
                   // Start the sequence
                   isHolding = true;
                   buttonPressTime = Date.now();
-                  reactionButton.textContent = "WAIT FOR GREEN LIGHT";
-                  resultDisplay.textContent = "Watch the traffic light...";
+                  reactionButton.textContent = "WAIT";
+                  resultDisplay.textContent = "Watch the light...";
                   feedbackDisplay.textContent = "";
                   
                   // Turn on red light
@@ -266,7 +320,7 @@ const TrafficLightGame = () => {
                           yellowLight.classList.remove('active');
                           greenLight.classList.add('active');
                           
-                          reactionButton.textContent = "RELEASE NOW!";
+                          reactionButton.textContent = "RELEASE!";
                       }, yellowWaitTime);
                       
                   }, redWaitTime);
@@ -293,7 +347,7 @@ const TrafficLightGame = () => {
                           body.classList.remove('early-release');
                       }, 500);
                       
-                      resultDisplay.textContent = "Too early! You released before the green light.";
+                      resultDisplay.textContent = "Too early!";
                       feedbackDisplay.textContent = "Try again!";
                       reactionButton.textContent = "HOLD ME";
                       resetLights();
@@ -322,32 +376,43 @@ const TrafficLightGame = () => {
                   }
               });
               
+              // For touchscreen support
+              reactionButton.addEventListener('touchstart', function(e) {
+                  e.preventDefault();
+                  reactionButton.dispatchEvent(new Event('mousedown'));
+              });
+              
+              reactionButton.addEventListener('touchend', function(e) {
+                  e.preventDefault();
+                  reactionButton.dispatchEvent(new Event('mouseup'));
+              });
+              
               // Display the result
               function displayResult(reactionTime) {
-                  resultDisplay.textContent = \`Your reaction time: \${reactionTime} ms\`;
+                  resultDisplay.textContent = \`Reaction: \${reactionTime} ms\`;
                   
                   // Provide feedback based on reaction time
                   let feedback = "";
                   if (reactionTime < 150) {
-                      feedback = "Impossible! Are you cheating? 🤨";
+                      feedback = "Impossible! 🤨";
                   } else if (reactionTime < 200) {
-                      feedback = "Superhuman reflexes! 🚀";
+                      feedback = "Superhuman! 🚀";
                   } else if (reactionTime < 250) {
                       feedback = "Lightning fast! ⚡";
                   } else if (reactionTime < 300) {
-                      feedback = "Excellent reflexes! 🏆";
+                      feedback = "Excellent! 🏆";
                   } else if (reactionTime < 350) {
                       feedback = "Very good! 👏";
                   } else if (reactionTime < 400) {
-                      feedback = "Good reaction time! 👍";
+                      feedback = "Good! 👍";
                   } else if (reactionTime < 500) {
-                      feedback = "Average reaction time";
+                      feedback = "Average";
                   } else if (reactionTime < 600) {
-                      feedback = "A bit slow, but okay";
+                      feedback = "A bit slow";
                   } else if (reactionTime < 800) {
-                      feedback = "You might be tired... 😴";
+                      feedback = "Tired? 😴";
                   } else {
-                      feedback = "Were you distracted? 🤔";
+                      feedback = "Distracted? 🤔";
                   }
                   
                   feedbackDisplay.textContent = feedback;
@@ -410,32 +475,25 @@ const TrafficLightGame = () => {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
-      <div className="mb-6">
-        <p className="text-gray-700 mb-4">
+      <div className="mb-4">
+        <p className="text-gray-700 mb-2">
           This Traffic Light Reaction Game tests your reaction time using a stoplight system. It measures how quickly you can 
           respond to a visual stimulus, which is crucial for activities like driving, sports, or any situation requiring quick reflexes.
         </p>
-        <p className="text-gray-700 mb-4">
-          <strong>How to play:</strong> Press and hold the red button. The traffic light will cycle from red to yellow to green.
-          When the light turns green, release the button as quickly as possible! The game will measure how quickly you responded.
-        </p>
-        <p className="text-gray-700 mb-4">
-          <strong>What it measures:</strong> This tests your simple reaction time - the time between a single stimulus (green light) 
-          and your response (releasing the button). Average reaction times range from 200-250ms for young adults, with slower times for 
-          complex decisions.
+        <p className="text-gray-700 mb-2">
+          <strong>How to play:</strong> Press and hold the button, then release when the light turns green as quickly as possible.
         </p>
       </div>
       
-      <div className="h-[600px] rounded-lg overflow-hidden" ref={containerRef}>
+      <div className="h-[500px] rounded-lg overflow-hidden" ref={containerRef}>
         <div className="flex items-center justify-center h-full bg-gray-100">
           <p className="text-gray-500">Loading traffic light game...</p>
         </div>
       </div>
       
-      <div className="mt-4 text-gray-700">
+      <div className="mt-3 text-gray-700">
         <p className="text-sm">
-          <strong>Note:</strong> Simple reaction time tasks like this provide a good baseline measurement but don't capture the 
-          complexity of real-world reflexes which often involve decision-making and multiple options.
+          <strong>Note:</strong> Average reaction times range from 200-250ms for young adults.
         </p>
       </div>
     </div>

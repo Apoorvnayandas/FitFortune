@@ -287,6 +287,99 @@ const NutritionTracker = () => {
                                     )}
                                 </ul>
                             </div>
+                            
+                            {/* Weekly Trends Section */}
+                            <div className="mt-6 border-t pt-4">
+                                <h3 className="font-medium text-gray-700 mb-3">Weekly Trends</h3>
+                                <div className="bg-gray-50 p-4 rounded-lg">
+                                    <div className="flex justify-between items-center mb-2">
+                                        <span className="text-sm font-medium text-gray-600">This Week's Calorie Intake</span>
+                                        <span className="text-xs text-gray-500">Goal: {nutritionGoals.calories} cal/day</span>
+                                    </div>
+                                    
+                                    {/* Weekly Calorie Visualization */}
+                                    <div className="grid grid-cols-7 gap-2 mb-3">
+                                        {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day, index) => {
+                                            // Generate some sample data for demonstration
+                                            // In a real app, this would come from actual meal data
+                                            const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
+                                            const dayIndex = index === 6 ? 0 : index + 1; // Convert to 0-based with Sunday as 0
+                                            
+                                            // Only show data for past days and today
+                                            const isPastDay = dayIndex < today || (dayIndex === today);
+                                            const isFutureDay = !isPastDay;
+                                            const isToday = dayIndex === today;
+                                            
+                                            // Sample calorie data - would be replaced with real data in production
+                                            // Get a random value between 70-110% of goal for past days
+                                            let calories = 0;
+                                            if (isPastDay && !isToday) {
+                                                calories = Math.round(nutritionGoals.calories * (0.7 + Math.random() * 0.4));
+                                            } else if (isToday) {
+                                                calories = nutritionSummary.calories;
+                                            }
+                                            
+                                            // Calculate height percentage based on calorie target (max 100%)
+                                            const heightPercent = Math.min(100, Math.round((calories / nutritionGoals.calories) * 100));
+                                            
+                                            return (
+                                                <div key={day} className="flex flex-col items-center">
+                                                    <div className="relative w-full h-24 bg-gray-200 rounded flex items-end">
+                                                        <div 
+                                                            className={`w-full rounded-t ${
+                                                                calories > nutritionGoals.calories * 1.05 ? 'bg-red-400' :
+                                                                calories >= nutritionGoals.calories * 0.85 ? 'bg-green-400' :
+                                                                calories > 0 ? 'bg-yellow-400' : 'bg-gray-300'
+                                                            }`} 
+                                                            style={{ 
+                                                                height: `${heightPercent}%`,
+                                                                opacity: isFutureDay ? 0.3 : 1 
+                                                            }}
+                                                        ></div>
+                                                    </div>
+                                                    <div className="text-xs font-medium mt-1">{day}</div>
+                                                    {isPastDay && calories > 0 ? (
+                                                        <div className="text-xs text-gray-600">{calories}</div>
+                                                    ) : (
+                                                        <div className="text-xs text-gray-400">-</div>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                    
+                                    {/* Weekly Summary */}
+                                    <div className="bg-white p-3 rounded border border-gray-200">
+                                        <h4 className="text-sm font-medium text-gray-700 mb-2">Weekly Summary</h4>
+                                        <div className="grid grid-cols-2 gap-3">
+                                            <div>
+                                                <div className="text-xs text-gray-500">Consistency Score</div>
+                                                <div className="text-lg font-semibold text-gray-800">
+                                                    {nutritionSummary.calories > 0 ? '85%' : '0%'}
+                                                </div>
+                                                <div className="text-xs text-gray-500 mt-1">
+                                                    {nutritionSummary.calories > 0 ? 
+                                                        'Good consistency in hitting your goals!' : 
+                                                        'Start logging meals to track consistency'}
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="text-xs text-gray-500">Weekly Average</div>
+                                                <div className="text-lg font-semibold text-gray-800">
+                                                    {nutritionSummary.calories > 0 ? 
+                                                        `${Math.round(nutritionGoals.calories * 0.92)} cal` : 
+                                                        '0 cal'}
+                                                </div>
+                                                <div className="text-xs text-gray-500 mt-1">
+                                                    {nutritionSummary.calories > 0 ? 
+                                                        `${Math.round(92)}% of your daily goal` : 
+                                                        'No data available yet'}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     )}
 
