@@ -1,16 +1,17 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext.jsx';
 import ProfileMenu from './ProfileMenu';
+import LogoSVG from '../common/LogoSVG';
 
 const Header = () => {
     const { user, isAuthenticated } = useAuth();
-
+    
     return (
         <nav className="flex-between h-[10vh] border-b-[1px] px-8">
             <NavLink to="/" >
                 <div className="nav_logo flex-center gap-2 cursor-pointer">
                     <h3 className="font-bold text-2xl">Fit<br className='m-0' />Fortune</h3>
-                    <img src="/assets/logo.svg" width={50} alt="FitFortune logo" />
+                    <LogoSVG width={80} height={80} />
                 </div>
             </NavLink>
             <ul className="nav_links flex-between w-[56%]">

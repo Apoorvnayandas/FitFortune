@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Subscribe from "./Subscribe";
+import LogoSVG from '../common/LogoSVG';
 
 
 const Footer = () => {
@@ -65,7 +66,7 @@ const Footer = () => {
                     © 2025 FitFortune. All rights reserved.
                 </div>
                 <div className="">
-                    <img src={"/assets/logo.svg"} width={50} alt="logo" />
+                    <LogoSVG width={80} height={80} />
                 </div>
                 <ul className="flex gap-10 font-semibold text-gray-500">
                     <li>

@@ -1,7 +1,88 @@
-<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1H14.736C15.8406 1 16.736 1.89543 16.736 3V16.736H1V1Z" stroke="#1E1E1E" stroke-width="2"/>
-<path d="M17 17H30.736C31.8406 17 32.736 17.8954 32.736 19V32.736H17V17Z" stroke="#1E1E1E" stroke-width="2"/>
-<path d="M1 17H16.736V32.736H3C1.89543 32.736 1 31.8406 1 30.736V17Z" stroke="#1E1E1E" stroke-width="2"/>
-<path d="M12.832 4.936L13.984 13H12.352L11.68 7.72L9.568 13H8.8L6.688 7.72L6.016 13H4.384L5.536 4.936H7.072L9.184 10.12L11.296 4.936H12.832Z" fill="#1E1E1E"/>
-<path d="M28.832 20.936L29.984 29H28.352L27.68 23.72L25.568 29H24.8L22.688 23.72L22.016 29H20.384L21.536 20.936H23.072L25.184 26.12L27.296 20.936H28.832Z" fill="#1E1E1E"/>
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  width="500"
+  height="300"
+  viewBox="0 0 500 300"
+>
+  <!-- 
+    Refined approximation of the FitFortune logo. 
+    - Two ellipses with gradients
+    - Central bar
+    - Two lines of text
+  -->
+
+  <!-- ============ DEFINITIONS ============ -->
+  <defs>
+    <!-- Gradient for left loop -->
+    <linearGradient id="leftLoopGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#819F8F" />
+      <stop offset="100%" stop-color="#6E8C7D" />
+    </linearGradient>
+
+    <!-- Gradient for right loop -->
+    <linearGradient id="rightLoopGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2F3B35" />
+      <stop offset="100%" stop-color="#46554D" />
+    </linearGradient>
+  </defs>
+
+  <!-- ============ LOOPS ============ -->
+  <!-- Left loop (ellipse) -->
+  <ellipse
+    cx="190"
+    cy="130"
+    rx="70"
+    ry="70"
+    fill="url(#leftLoopGradient)"
+  />
+
+  <!-- Right loop (ellipse) -->
+  <ellipse
+    cx="310"
+    cy="130"
+    rx="70"
+    ry="70"
+    fill="url(#rightLoopGradient)"
+  />
+
+  <!-- ============ CENTER BAR ============ -->
+  <rect
+    x="160"
+    y="115"
+    width="180"
+    height="30"
+    fill="#2F3B35"
+    rx="5"  <!-- Slightly rounded corners, if desired -->
+    ry="5"
+  />
+
+  <!-- ============ TEXT ============ -->
+  <!-- "FITFORTUNE" -->
+  <text
+    x="250"  <!-- Centered horizontally (since viewBox width = 500) -->
+    y="220"
+    text-anchor="middle"
+    fill="#2F3B35"
+    font-family="Montserrat, sans-serif"
+    font-size="36"
+    font-weight="600"
+    letter-spacing="2"
+  >
+    FITFORTUNE
+  </text>
+
+  <!-- "HEALTH & FITNESS" -->
+  <text
+    x="250" 
+    y="255"
+    text-anchor="middle"
+    fill="#2F3B35"
+    font-family="Montserrat, sans-serif"
+    font-size="16"
+    font-weight="400"
+    letter-spacing="2"
+  >
+    HEALTH & FITNESS
+  </text>
 </svg>
