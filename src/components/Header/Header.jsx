@@ -45,11 +45,7 @@ const Header = () => {
                         Community
                     </NavLink>
                 </li>
-                <li className='text-lg text-gray-600 font-semibold hover:text-green-500 transition-colors'>
-                    <NavLink to="/nft-mint" className={({isActive}) => isActive ? "text-green-500 font-bold" : ""}>
-                        NFT Challenge 
-                    </NavLink>
-                </li>
+              
             </ul>
             <div className="nav_auth text-xl">
                 {isAuthenticated ? (
